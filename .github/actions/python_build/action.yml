@@ -11,6 +11,7 @@ runs:
       shell: bash
       run: |
         cd python
+        pip install build wheel
         pip install .
     - name: Test and build python package
       shell: bash
