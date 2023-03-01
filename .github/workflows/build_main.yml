@@ -1,13 +1,11 @@
-name: build_python
+name: build main
 on:
   push:
-    branches:
+    branches-ignore:
       - "python/*"
-      - "feature/*"
   pull_request:
     branches:
-      - "python/*"
-      - "feature/*"
+      - '**'
 jobs:
   build:
     runs-on: ubuntu-20.04
