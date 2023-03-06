@@ -1,0 +1,25 @@
+name: build kakapo python
+description: build kakapo python
+runs:
+  using: "composite"
+  steps:
+    - name: Configure python interpreter
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Install python dependencies
+      shell: bash
+      run: |
+        cd python
+        pip install build wheel
+        pip install hyperopt>=0.2.5 mlflow>=1.29.0
+        pip install .
+    - name: Test and build python package
+      shell: bash
+      run: |
+        cd python
+        python -m unittest
+        python -m build
+    - name: Copy python artifacts to GH Actions run
+      shell: bash
+      run: cp python/dist/*.whl staging

@@ -1,0 +1,10 @@
+name: upload kakapo artefacts
+description: upload kakapo artefacts
+runs:
+  using: "composite"
+  steps:
+    - name: upload artefacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: artefacts
+        path: staging/*
