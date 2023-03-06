@@ -17,9 +17,9 @@ sys.path.insert(0, os.path.abspath('../../python'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'ARC'
+project = 'Kakapo'
 copyright = '2022, Databricks Inc'
-author = 'Robert Whiffin, Marcell Ferencz, Milos Colic, Databricks Inc'
+author = 'Iliya Kostov, Milos Colic, Databricks Inc'
 
 # The full version, including alpha/beta/rc tags
 release = "v0.0.1"
@@ -65,7 +65,7 @@ html_theme = 'sphinx_material'
 html_theme_options = {
 
     # Set the name of the project to appear in the navigation.
-    'nav_title': f'ARC {release}',
+    'nav_title': f'Kakapo {release}',
 
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
@@ -76,22 +76,22 @@ html_theme_options = {
     'color_accent': 'green',
 
     # Set the repo location to get a badge with stats
-    'repo_url': 'https://github.com/databrickslabs/mosaic/',
-    'repo_name': 'ARC',
+    'repo_url': 'https://github.com/databricks-industry-solutions/rare-event-inspection',
+    'repo_name': 'kakapo',
 
     'globaltoc_depth': 3,
     'globaltoc_collapse': False,
     'globaltoc_includehidden': True,    
-    'heroes': {'index': 'Simple, scalable geospatial analytics on Databricks',
+    'heroes': {'index': 'Simple, scalable and unsupervised outlier detection on Databricks',
                'examples/index': 'examples and tutorials to get started with '
-                                 'Mosaic'},
+                                 'Kakapo'},
     "version_dropdown": True,
     # "version_json": "../versions-v2.json",
 
 }
 html_title = project
 html_short_title = project
-html_logo = 'images/mosaic_logo.svg'
+html_logo = 'images/kakapo_logo.svg'
 html_sidebars = {
     "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
 }
