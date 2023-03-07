@@ -79,11 +79,11 @@ def train_outlier_detection(params, model_space, X_train, X_test, y_test, ground
     model.set_model_space(model_space)
     model.fit(X_train)
 
-    y_test_pred = model.predict(None, X_test)
+    y_train_pred = model.predict(None, X_train)
 
     # Get model input and output signatures
     model_input_df = X_train
-    model_output_df = y_test_pred
+    model_output_df = y_train_pred
     model_signature = infer_signature(model_input_df, model_output_df)
 
     # log our model to mlflow
@@ -94,6 +94,7 @@ def train_outlier_detection(params, model_space, X_train, X_test, y_test, ground
     )
 
     if (ground_truth_flag):
+        y_test_pred = model.predict(None, X_test)
         score = roc_auc_score(y_score=y_test_pred, y_true=y_test)
     else:
         score = emmv_scores(model, X_test)["em"]
