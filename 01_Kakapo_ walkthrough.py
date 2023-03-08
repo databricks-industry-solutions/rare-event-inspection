@@ -156,9 +156,9 @@ mlflow.search_runs()
 
 # COMMAND ----------
 
-# Select a parent run to pick out the best performing model from and the metric by which to choose the model
+# Use the latest run or select a custom parent run to pick out the best performing model from and the metric by which to choose the model
 metric = "loss"
-parentRunId = "'<PARENT-RUN-ID>'"
+parentRunId = "\"" + mlflow.search_runs().iloc[0]["tags.mlflow.parentRunId"] +"\""
 
 # Get all child runs on current experiment
 runs = mlflow.search_runs(filter_string=f"tags.mlflow.parentRunId = {parentRunId}", order_by=[f"metrics.{metric} ASC"])
