@@ -21,6 +21,17 @@ import sys
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC Create a mlflow experiment to track the results of the hyperparameter search.
+
+# COMMAND ----------
+
+user = spark.sql("select current_user()").take(1)[0][0]
+mlflow.set_experiment(f"/Users/{user}/kakapo")
+
+
+# COMMAND ----------
+
 # MAGIC %md 
 # MAGIC ### 1. Generate synthetic data
 # MAGIC Use pyod's inbuilt generate_data method to create a simple synthetic data set with 5 features and a certain proportion of "outliers" and split the data into train and test sets
