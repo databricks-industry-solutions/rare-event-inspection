@@ -3,23 +3,25 @@
 [![CLOUD](https://img.shields.io/badge/CLOUD-ALL-blue?logo=googlecloud&style=for-the-badge)](https://cloud.google.com/databricks)
 [![POC](https://img.shields.io/badge/POC-10_days-green?style=for-the-badge)](https://databricks.com/try-databricks)
 
-*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*
+*Kakapo (KAH-kə-poh) implements a standard set of APIs for outlier detection at scale on Databricks. It provides an integration of the vast PyOD library of outlier detection algorithms with MLFlow for tracking and packaging of models and hyperopt for exploring vast, complex and heterogeneous search spaces.*
+
+Kakapo aims to address a number of considerations to ensure robust solutions:
+- Future proofing and scalability, i.e. how to handle not just today’s workloads but have a framework that scales as requirements change - e.g. volume/ velocity/ complexity increases
+- Productivity and collaboration, i.e. how to ensure that work and ideas can be easily shared
+- Governance and auditability, i.e. how to can collect and log metadata, ensure robust audit trails and ultimately produce data that can be trusted
+___
+<iliya.kostov@databricks.com> \
+<milos.colic@databricks.com>
 
 ___
-<john.doe@databricks.com>
 
-___
-
-
-IMAGE TO REFERENCE ARCHITECTURE
-
-___
 
 &copy; 2022 Databricks, Inc. All rights reserved. The source in this notebook is provided subject to the Databricks License [https://databricks.com/db-license-source].  All included or referenced third party libraries are subject to the licenses set forth below.
 
 | library                                | description             | license    | source                                              |
 |----------------------------------------|-------------------------|------------|-----------------------------------------------------|
-| PyYAML                                 | Reading Yaml files      | MIT        | https://github.com/yaml/pyyaml                      |
+| PyOD                                 | A Comprehensive and Scalable Python Library for Outlier Detection (Anomaly Detection)      | BSD (2-Clause)        | https://pypi.org/project/pyod                      |
+| EMMV                                 | Metrics for unsupervised anomaly detection models      | MIT        | https://pypi.org/project/emmv                      |
 
 ## Getting started
 
@@ -27,14 +29,13 @@ Although specific solutions can be downloaded as .dbc archives from our websites
 
 <img width="500" alt="add_repo" src="https://user-images.githubusercontent.com/4445837/177207338-65135b10-8ccc-4d17-be21-09416c861a76.png">
 
-To start using a solution accelerator in Databricks simply follow these steps: 
+To start using this solution in Databricks simply follow these steps: 
 
-1. Clone solution accelerator repository in Databricks using [Databricks Repos](https://www.databricks.com/product/repos)
-2. Attach the `RUNME` notebook to any cluster and execute the notebook via Run-All. A multi-step-job describing the accelerator pipeline will be created, and the link will be provided. The job configuration is written in the RUNME notebook in json format. 
-3. Execute the multi-step-job to see how the pipeline runs. 
-4. You might want to modify the samples in the solution accelerator to your need, collaborate with other users and run the code samples against your own data. To do so start by changing the Git remote of your repository  to your organization’s repository vs using our samples repository (learn more). You can now commit and push code, collaborate with other user’s via Git and follow your organization’s processes for code development.
+1. Clone the repository in Databricks using [Databricks Repos](https://www.databricks.com/product/repos)
+2. Attach the `01_Kakapo_ walkthrough` notebook to any ML runtime cluster and execute the notebook via Run-All.
+3. You might want to modify the samples in the solution to your need, collaborate with other users and run the code samples against your own data. To do so start by changing the Git remote of your repository  to your organization’s repository vs using our samples repository (learn more). You can now commit and push code, collaborate with other user’s via Git and follow your organization’s processes for code development.
 
-The cost associated with running the accelerator is the user's responsibility.
+The cost associated with running the solution is the user's responsibility.
 
 
 ## Project support 
