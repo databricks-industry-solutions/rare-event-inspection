@@ -20,7 +20,7 @@ ___
 
 | library                                | description             | license    | source                                              |
 |----------------------------------------|-------------------------|------------|-----------------------------------------------------|
-| PyOD                                 | A Comprehensive and Scalable Python Library for Outlier Detection (Anomaly Detection)      | BSD        | https://pypi.org/project/pyod                      |
+| PyOD                                 | A Comprehensive and Scalable Python Library for Outlier Detection (Anomaly Detection)      | BSD (2-Clause)        | https://pypi.org/project/pyod                      |
 | EMMV                                 | Metrics for unsupervised anomaly detection models      | MIT        | https://pypi.org/project/emmv                      |
 
 ## Getting started
