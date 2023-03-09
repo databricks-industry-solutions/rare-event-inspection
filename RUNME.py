@@ -38,27 +38,15 @@ job_json = {
         "tags": {
             "usage": "solacc_testing",
             "group": "SOLACC",
-            "accelerator": "sample-solacc"
+            "accelerator": "rare-event-inspection"
         },
         "tasks": [
             {
                 "job_cluster_key": "sample_solacc_cluster",
                 "notebook_task": {
-                    "notebook_path": f"01_Introduction_And_Setup"
+                    "notebook_path": f"01_Kakapo_ walkthrough"
                 },
                 "task_key": "sample_solacc_01"
-            },
-            {
-                "job_cluster_key": "sample_solacc_cluster",
-                "notebook_task": {
-                    "notebook_path": f"02_Analysis"
-                },
-                "task_key": "sample_solacc_02",
-                "depends_on": [
-                    {
-                        "task_key": "sample_solacc_01"
-                    }
-                ]
             }
         ],
         "job_clusters": [
