@@ -37,21 +37,33 @@ job_json = {
         "max_concurrent_runs": 1,
         "tags": {
             "usage": "solacc_testing",
-            "group": "SOLACC",
+            "group": "PUB",
             "accelerator": "rare-event-inspection"
         },
         "tasks": [
             {
-                "job_cluster_key": "sample_solacc_cluster",
+                "job_cluster_key": "kakapo_cluster",
                 "notebook_task": {
-                    "notebook_path": f"01_Kakapo_ walkthrough"
+                    "notebook_path": f"01_Kakapo_walkthrough"
                 },
-                "task_key": "sample_solacc_01"
-            }
+                "task_key": "kakapo_01"
+            },
+            # {
+            #     "job_cluster_key": "kakapo_cluster",
+            #     "notebook_task": {
+            #         "notebook_path": f"02_Analysis"
+            #     },
+            #     "task_key": "kakapo_02",
+            #     "depends_on": [
+            #         {
+            #             "task_key": "kakapo_01"
+            #         }
+            #     ]
+            # }
         ],
         "job_clusters": [
             {
-                "job_cluster_key": "sample_solacc_cluster",
+                "job_cluster_key": "kakapo_cluster",
                 "new_cluster": {
                     "spark_version": "11.3.x-cpu-ml-scala2.12",
                 "spark_conf": {
@@ -61,8 +73,8 @@ job_json = {
                     "node_type_id": {"AWS": "i3.xlarge", "MSA": "Standard_DS3_v2", "GCP": "n1-highmem-4"},
                     "custom_tags": {
                         "usage": "solacc_testing",
-                        "group": "SOLACC",
-                        "accelerator": "sample-solacc"
+                        "group": "PUB",
+                        "accelerator": "rare-event-inspection"
                     },
                 }
             }

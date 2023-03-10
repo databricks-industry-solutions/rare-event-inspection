@@ -85,6 +85,10 @@ uid = uuid.uuid4().hex
 
 # COMMAND ----------
 
+# Set mlflow experiment for the notebook if it is run in a job
+username = dbutils.notebook.entry_point.getDbutils().notebook().getContext().userName().get()
+mlflow.set_experiment('/Users/{}/rare_event'.format(username))
+
 # Run model training & hyper parameter tuning in parallel using hyperopt
 with mlflow.start_run(run_name=uid):
   best_params = fmin(
