@@ -3,6 +3,8 @@
 [![CLOUD](https://img.shields.io/badge/CLOUD-ALL-blue?logo=googlecloud&style=for-the-badge)](https://cloud.google.com/databricks)
 [![POC](https://img.shields.io/badge/POC-10_days-green?style=for-the-badge)](https://databricks.com/try-databricks)
 
+
+![image](python/resources/kakapo-logo.png)
 *Kakapo (KAH-kə-poh) implements a standard set of APIs for outlier detection at scale on Databricks. It provides an integration of the vast PyOD library of outlier detection algorithms with MLFlow for tracking and packaging of models and hyperopt for exploring vast, complex and heterogeneous search spaces.*
 
 Kakapo aims to address a number of considerations to ensure robust solutions:
