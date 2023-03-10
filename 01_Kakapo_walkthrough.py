@@ -21,6 +21,17 @@ import sys
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC Create a mlflow experiment to track the results of the hyperparameter search.
+
+# COMMAND ----------
+
+user = spark.sql("select current_user()").take(1)[0][0]
+mlflow.set_experiment(f"/Users/{user}/rare_events")
+
+
+# COMMAND ----------
+
 # MAGIC %md 
 # MAGIC ### 1. Generate synthetic data
 # MAGIC Use pyod's inbuilt generate_data method to create a simple synthetic data set with 5 features and a certain proportion of "outliers" and split the data into train and test sets
@@ -73,10 +84,6 @@ GROUND_TRUTH_OD_EXISTS = True
 uid = uuid.uuid4().hex
 
 # COMMAND ----------
-
-# Set mlflow experiment for the notebook if it is run in a job
-username = dbutils.notebook.entry_point.getDbutils().notebook().getContext().userName().get()
-mlflow.set_experiment('/Users/{}/rare_event'.format(username))
 
 # Run model training & hyper parameter tuning in parallel using hyperopt
 with mlflow.start_run(run_name=uid):
