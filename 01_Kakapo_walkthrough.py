@@ -4,6 +4,19 @@
 
 # COMMAND ----------
 
+# MAGIC %md 
+# MAGIC <img src="https://github.com/databricks-industry-solutions/rare-event-inspection/raw/main/python/resources/kakapo-logo.png"  width="70%">
+# MAGIC 
+# MAGIC Kakapo (KAH-kə-poh) implements a standard set of APIs for outlier detection at scale on Databricks. It provides an integration of the vast PyOD library of outlier detection algorithms with MLFlow for tracking and packaging of models and hyperopt for exploring vast, complex and heterogeneous search spaces.
+# MAGIC 
+# MAGIC Kakapo aims to address a number of considerations to ensure robust solutions:
+# MAGIC 
+# MAGIC * Future proofing and scalability, i.e. how to handle not just today’s workloads but have a framework that scales as requirements change - e.g. volume/ velocity/ complexity increases
+# MAGIC * Productivity and collaboration, i.e. how to ensure that work and ideas can be easily shared
+# MAGIC * Governance and auditability, i.e. how to can collect and log metadata, ensure robust audit trails and ultimately produce data that can be trusted
+
+# COMMAND ----------
+
 # MAGIC %pip install databricks-kakapo pyod --quiet
 
 # COMMAND ----------
